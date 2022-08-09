@@ -31,7 +31,7 @@ func setupRouter() *gin.Engine {
 	})
 
 	r.GET("/", func(c *gin.Context) {
-		c.HTML(http.StatusOK, "home", gin.H{
+		c.HTML(http.StatusOK, "index", gin.H{
 			"title": "DevBlog | Home",
 		})
 	})
