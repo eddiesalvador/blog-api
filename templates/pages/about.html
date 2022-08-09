@@ -1,0 +1,38 @@
+{{define "about"}}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!--Needs . after reference to pass data to template-->
+        {{ template "title" . }} 
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link href="/css/mainstyles.css" rel="stylesheet" type="text/css" />
+        <!-- <script src="" async defer></script> -->
+    </head>
+    <body>
+        <div id="app">
+            <!-- Nav -->
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/devblog">DevBlog</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Main -->
+            <div class="main">
+                <h1>Hello, this is the About page</h1>
+                <img class="hero-img" src=""> 
+            </div>
+
+            <!-- Footer -->
+            {{ template "footer" . }}
+        </div>
+    </body>
+</html>
+{{end}}
