@@ -52,12 +52,13 @@ a {
 
 #nav-bar .container {
     position: relative;
-    width: 1060px;
+    width: clamp(320px, 1060px); /* Fix this to limit container to 1060px*/ 
     margin: 0 auto;
 }
 
 #nav-bar .site-menu {
     float: left;
+    margin-left: 16px;
 }
 
 .site-menu ul{
@@ -102,12 +103,12 @@ a {
 
 /* Style the search box inside the navigation bar */
 .top-search {
-    margin-top: 15px;
+    margin-top: 17px;
     float: right;
 }
 
 .top-search input[type=text] {
-    padding: 4px;
+    padding: 2px;
     border: none;
     font-size: 14px;
 }
@@ -117,7 +118,7 @@ a {
     padding: 4px 5px;
     margin-right: 16px;
     background: #ddd;
-    font-size: 17px;
+    font-size: 13px;
     border: none;
     cursor: pointer;
 }
@@ -134,7 +135,7 @@ a {
     color: var(--dark-olive-green);
     opacity: 0.9;
     font-weight: 600;
-    font-size: 60px;
+    font-size: clamp(2.1rem, 6vw, 5.2rem);
 
     /* centering a div */
     display: flex;
