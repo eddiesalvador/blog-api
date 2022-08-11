@@ -1,37 +1,150 @@
-.nav-bar {
-    /* display: flex; */
-    background-color: rgb(39, 36, 36);
-    position: sticky;
-    top: 0;
+:root {
+    background-color: var(--background-default);
+
+    /* colors */
+    --saddle-brown: #a54417;
+    --saddle-brown-50: #a5441780;
+    --tan: #c5a07e;
+    --cadet-blue: #7ea8b4;
+    --cadet-blue-50: #7ea8b480;
+    --dark-olive-green: #815e4c;
+    --almost-black: #080506;
+    --normal-font-color: #242424;
+    --background-default: white;
 }
 
-.nav-bar ul{
-    list-style-type: none;
+/* My default */
+*, html, body, div, dl, dt, dd, ul, ol, li, h1, 
+h2, h3, h4, h5, h6, pre, form, label, fieldset, 
+input, p, blockquote, th, td {
     margin: 0;
     padding: 0;
-    overflow: hidden;
 }
 
-.nav-bar li {
-    float: left;
+body {
+    color: var(--almost-black);
+    font: normal normal 14px Lato;
+    font-family: 'Lato', sans-serif;
+    line-height: 26px;
+    letter-spacing: 0px;
+    text-transform: none;
 }
 
-.nav-bar li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
+a {
     text-decoration: none;
 }
 
-.nav-bar li a:hover{
-    background-color: rgb(138, 12, 12);
+.wrapper {
+    max-width: 100%;
+    margin: 0 auto;
 }
 
-.active {
-    background-color: #51a1d1;
+
+/* nav-bar */
+#nav-bar {
+    background-color: var(--almost-black);
+    position: fixed;
+    height: 55px;
+    width: 100%;
+    top: 0;
+    z-index: 99;
 }
 
+#nav-bar .container {
+    position: relative;
+    width: 1060px;
+    margin: 0 auto;
+}
+
+#nav-bar .site-menu {
+    float: left;
+}
+
+.site-menu ul{
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.site-menu li {
+    border: none;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    display: inline-block;
+    margin-right: 22px;
+    position: relative;
+}
+
+.site-menu li a {
+    font: 11px Lato;
+    line-height: 55px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inherit;
+    color: white;
+    /* transition: .3s; */
+    -o-transition: .3s;
+    -ms-transition: .3s;
+    -moz-transition: .3s;
+    -webkit-transition: .3s;
+}
+
+.site-menu li a:hover {
+    opacity: 100%;
+    transition: opacity 1s;
+    color: var(--saddle-brown);
+}
+
+.site-menu li a:hover, .site-menu li a:hover,
+.site-menu li a:visited, .site-menu li a:link {
+    font-weight: 0, 500 !important;
+    text-decoration: none;
+}
+
+/* Style the search box inside the navigation bar */
+.top-search {
+    margin-top: 15px;
+    float: right;
+}
+
+.top-search input[type=text] {
+    padding: 4px;
+    border: none;
+    font-size: 14px;
+}
+
+.top-search button {
+    float: right;
+    padding: 4px 5px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* header */
+#header {
+    padding: 18px;
+    margin-top: 55px;
+    height: 140px;
+}
+
+#header h1{
+    color: var(--dark-olive-green);
+    opacity: 0.9;
+    font-weight: 600;
+    font-size: 60px;
+
+    /* centering a div */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* footer */
 .footer-basic {
     display: flex;
     justify-content: center;
@@ -39,5 +152,8 @@
 }
 
 p {
-    color: blue;
+    color: var(--normal-font-color);
 }
+
+
+

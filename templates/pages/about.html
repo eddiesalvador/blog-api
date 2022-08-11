@@ -9,6 +9,13 @@
         {{ template "title" . }} 
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--Google Fonts: Lato-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet"> 
+        
+        <!--load all Font Awesome styles -->
+        <link href="/media/fontawesome/css/all.css" rel="stylesheet">
         
         <link href="/css/mainstyles.css" rel="stylesheet" type="text/css" />
         <!-- <script src="" async defer></script> -->
@@ -16,20 +23,34 @@
     <body>
         <div id="app">
             <!-- Nav -->
-            <div class="nav-menu">
-                <nav>
-                    <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/about">About</a></li>
-                        <li><a href="/devblog">DevBlog</a></li>
-                    </ul>
+            <div id="nav-bar">
+                <nav class="container">
+                    <div class="site-menu">
+                        <ul>
+                            <li><a class="selected" href="/templates/pages/index.html" title="Home">Home</a></li>
+                            <li><a href="/templates/pages/about.html" title="About">About</a></li>
+                            <li><a href="/templates/pages/devblog.html" title="DevBlog">DevBlog</a></li>
+                        </ul>
+                    </div>
+                    <div class="top-search">
+                        <form action="/main.go">
+                            <input type="text" placeholder="Search..." name="search"/>
+                            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </form>
+                    </div>
                 </nav>
             </div>
-            
+
+            <!-- Header -->
+            <header id="header">
+                <div class="container">
+                    <h1>About Me</h1>
+                    <img class="hero-img" src=""> 
+                </div>    
+            </header>
+
             <!-- Main -->
             <div class="main">
-                <h1>Hello, this is the About page</h1>
-                <img class="hero-img" src=""> 
             </div>
 
             <!-- Footer -->
