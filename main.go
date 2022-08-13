@@ -30,13 +30,13 @@ func setupRouter() *gin.Engine {
 		c.JSON(http.StatusOK, "pong")
 	})
 
-	r.GET("/templates/pages", func(c *gin.Context) {
+	r.GET("/", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "index", gin.H{
 			"title": "DevBlog | Home",
 		})
 	})
 
-	r.GET("/templates/about", func(c *gin.Context) {
+	r.GET("/about", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "about", gin.H{
 			"title": "DevBlog | About",
 		})

@@ -10,7 +10,9 @@
     --dark-olive-green: #815e4c;
     --almost-black: #080506;
     --normal-font-color: #242424;
-    --background-default: white;
+    --background-default: #fefefe;
+    --text-default: #fefefecc;
+    --blue: #498afb; 
 }
 
 /* My default */
@@ -34,6 +36,10 @@ a {
     text-decoration: none;
 }
 
+.golang-template {
+    display: none;
+}
+
 .wrapper {
     max-width: 100%;
     margin: 0 auto;
@@ -42,7 +48,7 @@ a {
 
 /* nav-bar */
 #nav-bar {
-    background-color: var(--almost-black);
+    background-color: #444;
     position: fixed;
     height: 55px;
     width: 100%;
@@ -52,7 +58,10 @@ a {
 
 #nav-bar .container {
     position: relative;
-    width: clamp(320px, 1060px); /* Fix this to limit container to 1060px*/ 
+    /* Good until width is less than about 600px */ 
+    /* Try to add mobile responsiveness later */ 
+    width: min(1060px, 78%); 
+    height: inherit;
     margin: 0 auto;
 }
 
@@ -76,12 +85,14 @@ a {
 }
 
 .site-menu li a {
-    font: 11px Lato;
+    font: 14px Lato;
+    font-weight: 700;
     line-height: 55px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     text-transform: uppercase;
     display: inherit;
     color: white;
+    opacity: 80%;
     /* transition: .3s; */
     /* -o-transition: .3s;
     -ms-transition: .3s;
@@ -91,8 +102,9 @@ a {
 
 .site-menu li a:hover {
     opacity: 100%;
-    transition: opacity 1s;
-    color: var(--saddle-brown);
+    transition: opacity .2+
+    s;
+    color: rgb(0, 0, 255);
 }
 
 .site-menu li a:hover, .site-menu li a:hover,
@@ -126,35 +138,131 @@ a {
 
 /* header */
 #header {
-    padding: 18px;
     margin-top: 55px;
-    height: 140px;
+    background-color: #444;
+    position: static;
+    height: 200px; 
+    /* 200px */
+    /* 50vh */
+    width: 100%;
+    z-index: 9;
 }
 
-#header h1{
-    color: var(--dark-olive-green);
-    opacity: 0.9;
-    font-weight: 600;
-    font-size: clamp(2.1rem, 6vw, 5.2rem);
+#header .container{
+    margin: 0 auto;
+    height: inherit;
+    width: min(1060px, 78%);;
 
     /* centering a div */
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
+#header h1{
+    color: var(--background-default);
+    opacity: 0.9;
+    font-weight: 600;
+    font-size: clamp(2.25em, 6.5vw, 5.8em);
+    font-stretch: expanded;
+    letter-spacing: normal;
+    line-height: 100%;
+}
 
+#main {
+    margin-top: 50px;
+    background-color: inherit;
+    position: static;
+    width: 100%;
+    z-index: 9;
+}
 
-/* footer */
-.footer-basic {
+#main .container{
+    margin: 0 auto;
+    height: inherit;
+    width: min(1060px, 78%);;
+
+    /* centering a div */
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
 }
 
-p {
-    color: var(--normal-font-color);
+/* footer */
+#footer-basic {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 140px;
+    /*140px*/
+    background-color: #444;
+    color: var(--text-default);
 }
 
+#footer-basic .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    height: 100%;
+}
 
+#footer-basic .grid-item-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#footer-basic .github-link, #footer-basic .copyright{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+    text-align: center;
+}
+
+#footer-basic .grid-item-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#footer-basic .created-with{
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#footer-basic .created-with i{
+    height: 32px;
+    position: relative;
+    bottom: 9px;
+}
+
+#footer-basic .media-link{
+
+}
+
+#footer-basic .to-top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-wrap: break-word;
+    letter-spacing: 1px;
+}
+
+#footer-basic .to-top i{
+    margin-left: 5px;
+}
+
+#footer-basic a{
+    color: #39a9ff;
+}
 
