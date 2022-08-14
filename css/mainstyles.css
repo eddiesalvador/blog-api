@@ -176,19 +176,55 @@ a {
     position: static;
     width: 100%;
     z-index: 9;
+    overflow: hidden;
 }
 
 #main .container{
-    margin: 0 auto;
-    height: inherit;
-    width: min(1060px, 78%);;
-
-    /* centering a div */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
+    margin: auto;
+    width: min(1060px, 78%);
+    overflow: inherit;
 }
+
+#main .article-feed{
+    width: 710px;
+    margin-right: 30px;
+    float: left;
+}
+
+#main .post{
+    /* centering a div */
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    /* text-align: center; */
+
+    margin-bottom: 100px;
+}
+
+#main .post-header{
+    margin-bottom: 20px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+#main .post-summary{
+    
+}
+
+
+#main .sidebar{
+    width: 300px;
+    float: right;
+}
+
+#margin .sidebar-element{
+
+}
+
+
+
+
 
 /* footer */
 #footer-basic {
@@ -200,35 +236,39 @@ a {
     /*140px*/
     background-color: #444;
     color: var(--text-default);
+    /* bottom: 0; */
 }
 
 #footer-basic .container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-    height: 100%;
+    /* display: flex; */
+    position: relative;
+    /* align-items: center;
+    justify-content: center;
+    flex-direction: column; */
+    width: min(1060px, 78%);
+    height: inherit;
+    margin: 0 auto;
 }
 
-#footer-basic .grid-item-1{
+#footer-basic .footer-1{
+    height: 90px; 
+    width: inherit;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+#footer-basic .github-link{
+    display: flex;
     align-items: center;
     justify-content: center;
-}
-
-#footer-basic .github-link, #footer-basic .copyright{
-    display: flex;
-    flex-direction: column;
-    /* align-items: center;
-    justify-content: center; */
     text-align: center;
 }
 
-#footer-basic .grid-item-2{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+#footer-basic .github-link p{
+    margin-right: 7px;
 }
 
 #footer-basic .created-with{
@@ -241,20 +281,36 @@ a {
 }
 
 #footer-basic .created-with i{
-    height: 32px;
+    height: 30px;
     position: relative;
     bottom: 9px;
+    margin: 0 3px;
 }
 
-#footer-basic .media-link{
 
+#footer-basic .media-link a{
+    position: relative;
+    bottom: -12px;
+}
+
+/*works until viewport > 380px*/
+#footer-basic .footer-2{
+    height: 40px; 
+    width: 100%;
+    margin: 0;
+    display: block;
+}
+
+#footer-basic .copyright{
+    float: left;
+    margin-left: 16px;
+    margin-top: 10px;
 }
 
 #footer-basic .to-top{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow-wrap: break-word;
+    float: right;
+    margin-right: 16px;
+    margin-top: 5px;
     letter-spacing: 1px;
 }
 
