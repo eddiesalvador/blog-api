@@ -14,6 +14,7 @@ func InitDb() *gorm.DB {
 }
 
 func connectDB() (*gorm.DB) {
+	fmt.Println("Connecting to database...")
 	dsn := DB_USERNAME +":"+ DB_PASSWORD +"@tcp"+ "(" + DB_HOST + ":" + DB_PORT +")/" + DB_NAME + "?" + "parseTime=true&loc=Local"
 	fmt.Println("dsn : ", dsn)
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{
@@ -25,6 +26,8 @@ func connectDB() (*gorm.DB) {
 		fmt.Println("Error connecting to database : error=%v", err)
 		return nil
 	}
+
+	fmt.Println("Connection to " + DB_HOST + ":" + DB_PORT + " - " + DB_NAME + " was successful")
 
 	return db
 }
