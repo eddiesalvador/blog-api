@@ -1,6 +1,6 @@
-<div class="golang-template">
-    {{define "home"}}
-</div>
+<!-- <div class="golang-template"> -->
+{{define "index"}}
+<!-- </div> -->
 
 <!DOCTYPE html>
 <html>
@@ -9,7 +9,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
         <!--Needs . after reference to pass data to template-->
-        <!-- {{ template "title" . }}  -->
+        {{ template "title" . }} 
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!--Google Fonts: Lato-->
@@ -18,9 +18,10 @@
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet"> 
         
         <!--load all Font Awesome styles -->
-        <link href="/media/fontawesome/css/all.css" rel="stylesheet">
+        <link href="/media/fontawesome/css/all.css" rel="stylesheet"/>
         
-        <link href="/css/mainstyles.css" rel="stylesheet" type="text/css" />
+        <link href="/css/mainstyles.css" rel="stylesheet" type="text/css"/>
+        
         <!-- <script src="" async defer></script> -->
     </head>
     <body>
@@ -30,15 +31,15 @@
                 <div class="container">
                     <div class="site-menu">
                         <ul>
-                            <li><a class="selected" href="/templates/pages/index.html" title="Home">Home</a></li>
-                            <li><a href="/templates/pages/about.html" title="About">About</a></li>
-                            <li><a href="/templates/pages/devblog.html" title="DevBlog">DevBlog</a></li>
+                            <li><a class="selected" href="/" title="Home">Home</a></li>
+                            <li><a href="/about" title="About">About</a></li>
+                            <li><a href="/devblog" title="DevBlog">DevBlog</a></li>
                         </ul>
                     </div>
                     <div class="top-search">
-                        <form action="">
+                        <form action="/search/posts" method="post">
                             <input type="text" placeholder="Search articles..." name="search"/>
-                            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            <button type="submit" value="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
                         </form>
                     </div>
                 </div>
@@ -92,7 +93,7 @@
                                 </div>
                                 <div class="post-entry"> Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis. Ut wisi enim ad minim...</div>
                             </div>
-                            <script type="text/javascript">createSummaryAndThumb("summary8983856984722418617","Artists in The Festivals","http://rosemary-minimal-themexpose.blogspot.com/2015/03/early-morning-in-bed.html","March 04, 2015","8","<a href='http://rosemary-minimal-themexpose.blogspot.com/search/label/Lifestyle?max-results=6' rel='tag'>Lifestyle</a>");</script>
+                            <!-- <script type="text/javascript">createSummaryAndThumb("summary8983856984722418617","Artists in The Festivals","http://rosemary-minimal-themexpose.blogspot.com/2015/03/early-morning-in-bed.html","March 04, 2015","8","<a href='http://rosemary-minimal-themexpose.blogspot.com/search/label/Lifestyle?max-results=6' rel='tag'>Lifestyle</a>");</script> -->
                             <div class="post-meta group">
                                 <a class="read-more" href="/pages/article:id=somenumber">Continue Reading</a>
                                 <ul class="socials">
@@ -161,8 +162,6 @@
                             <div class="widget HTML" data-version="1" id="HTML4">
                                 <h2><span>recent posts</span></h2>
                                 <ul class="side-newsfeed">
-                                    <script>document.write("<script src=\"/feeds/posts/default?max-results="+numposts2+"&orderby=published&alt=json-in-script&callback=showrecentposts2\"><\/script>");</script>
-                                    <script src="/feeds/posts/default?max-results=8&amp;orderby=published&amp;alt=json-in-script&amp;callback=showrecentposts2"></script>
                                     <li>
                                         <div class="side-item">
                                             <div class="side-image">
@@ -283,4 +282,4 @@
         </div>
     </body>
 </html>
-<!-- {{end}} -->
+{{end}}
